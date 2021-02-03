@@ -30,6 +30,7 @@ socket.on('updateUserList', userListObj => {
     }
 });
 
+
 socket.on('chat_message', msgObj => {
     console.log(msgObj)
     const item = document.createElement('div');
@@ -41,6 +42,10 @@ socket.on('chat_message', msgObj => {
     `
     chatMessages.appendChild(item);
 });
+
+
+
+
 
 document.getElementById('logout').onclick = function() {
     console.log('logout');
