@@ -10,3 +10,10 @@ Tiimi liikmete nimed:
  Teema:
  
 Lähme chati teemaga edasi 
+
+Võmalikud uued lisafunktionaalsused:
+  - Canvas (joonistamine)
+  - Grupi chati loomine
+  - Private chati loomine
+  - Fotode/videode jagamine
+  - Live videode/kõne tegemine
