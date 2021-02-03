@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/public/css/style.css">
     <title>Login</title>
 </head>
-<div class="fles-center">
+<div class="flex-center">
+    <form x-data="{password: '',password_confirm: ''}">
     <div class="login-card">
         <form class="login-form">
             <h1>Log In</h1>
@@ -18,7 +19,7 @@
             </div>
             <div class="from-group">
                 <label for="password">Password</label>
-                <input placeholder="" type="password" id="password"  />
+                <input placeholder="" type="password" id="password" x-model="password"  />
             </div>
             <button class="login-in-btn" type="button" id="login-button">Log in</button>
             <div class="register-conteiner">
