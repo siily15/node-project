@@ -14,16 +14,14 @@
             <h1>Log In</h1>
 
             <div class="from-group">
-                <label for="username">Username</label>
-                <input placeholder="" type="text" id="username">
+                <input placeholder="USERNAME" type="text" id="username">
             </div>
             <div class="from-group">
-                <label for="password">Password</label>
-                <input placeholder="" type="password" id="password" x-model="password"  />
+                <input placeholder="PASSWORD" type="password" id="password" x-model="password"  />
             </div>
-            <button class="login-in-btn" type="button" id="login-button">Log in</button>
+            <button class="login-in-btn" type="button" id="login-button">Sign in</button>
             <div class="register-conteiner">
-                <button onclick="location.href='/public/register.html'" class="register-btn" id="register-button" type="button" >register</button>
+                <h1 class="sign-up-h1">Not a member?</h1> <a href="/public/register.html" id="register-button">Sign up</a>
             </div>
         </form>
     </div>
@@ -32,6 +30,11 @@
 </html>
 
 <style>
+
+    .sign-up-h1 {
+        color: 4940bc;
+        font-size: 16px;
+    }
 
     .register-conteiner {
         margin-top: 1rem;
@@ -55,9 +58,9 @@
     }
 
     .login-in-btn {
+        background: linear-gradient(90deg, #79FF10 0%, #2BFFCC 100%);
         margin-top:1rem ;
         padding: 20px;
-        background-color: #42b983;
         border: none;
         border-radius: 4px;
         display: block;
