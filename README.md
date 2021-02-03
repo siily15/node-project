@@ -5,6 +5,7 @@ Tiimi liikmete nimed:
  - Arno Kosk
  - Karl-Mihkel Truu
  - Johan-Rasmus Teär
+ - Gerli Kask
  
  Teema:
  
