@@ -9,13 +9,29 @@
 </head>
 
 <body>
-    <div>
+    <body>
         <div>
+            <form x-data="{password: '',password_confirm: ''}">
+                <div>
+                    <label for="username">Username</label>
+                    <input placeholder="" id="username" type="text" />
+                </div>
 
+                <div>
+                    <label for="password">Password</label>
+                    <input placeholder="" id="password" type="password" x-model="password" />
+                </div>
+
+                <div>
+                    <button type="button" id="login-button">Login</button>
+                </div>
+                <div>
+                    <a href="/public/register.html" id="register-button">Register</a>
+                </div>
+            </form>
         </div>
-    </div>
-
-
+        <script src="/public/js/login.js"></script>
+    </body>	
     <script src="/public/js/register-validate.js"></script>
     <script src="/public/js/register.js"></script>
 </body>
