@@ -34,9 +34,12 @@
 
 
   function drawLine(x0, y0, x1, y1, color, emit){
+
+    var rect = canvas.getBoundingClientRect();
+    console.log(rect.top, rect.right, rect.bottom, rect.left)
     context.beginPath();
-    context.moveTo(x0, y0);
-    context.lineTo(x1, y1);
+    context.moveTo(x0 - rect.left, y0 - rect.top);
+    context.lineTo(x1 - rect.left, y1 - rect.top);
     context.strokeStyle = color;
     context.lineWidth = 2;
     context.stroke();
@@ -45,6 +48,8 @@
     if (!emit) { return; }
     var w = canvas.width;
     var h = canvas.height;
+
+
 
     socket.emit('drawing', {
       x0: x0 / w,
@@ -56,6 +61,7 @@
   }
 
   function onMouseDown(e){
+    console.log("jee");
     drawing = true;
     current.x = e.clientX||e.touches[0].clientX;
     current.y = e.clientY||e.touches[0].clientY;
@@ -72,6 +78,7 @@
     drawLine(current.x, current.y, e.clientX||e.touches[0].clientX, e.clientY||e.touches[0].clientY, current.color, true);
     current.x = e.clientX||e.touches[0].clientX;
     current.y = e.clientY||e.touches[0].clientY;
+    console.log(current.x, current.y);
   }
 
   function onColorUpdate(e){
@@ -103,8 +110,14 @@
   
   // make the canvas fill its parent
   function onResize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    var rect = canvas.getBoundingClientRect();
+    var canvasBox = document.getElementById('canvas-box');
+    var canvasBoxHeader = document.getElementById('canvas-box-header');
+    canvas.width = canvasBox.clientWidth;
+    canvas.height = canvasBox.clientHeight-canvasBoxHeader.clientHeight;
+
+   // canvas.width = window.innerWidth;
+   // canvas.height = window.innerHeight;
   }
 
 })();

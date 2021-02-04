@@ -1,5 +1,5 @@
 
-.chat {
+/* .chat {
     display: flex;
     flex-direction: row;
 }
@@ -13,11 +13,11 @@
     min-height: 20vh;
     border: 1px solid black;
     padding: 0.5rem;
-}
+} */
 
 /* NO NEED THIS CSS - just for custom scrollbar which can also be configured in tailwind.config.js*/
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
 }
@@ -57,7 +57,7 @@
 
 ::-webkit-scrollbar-corner {
     background: transparent;
-}
+} */
 
 
 
@@ -82,24 +82,27 @@
   .whiteboard {
     height: 100%;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     right: 0;
     bottom: 0;
     top: 0;
-    border-style: dashed;
   }
-  
+#canvas-container{
+    position: relative;
+
+ }
   .colors {
-    position: fixed;
-    top: 15px;
-    left: 15px;
+    position: absolute;
+    background-color: aliceblue;
+    top: 4px;
+    right: 4px;
   }
   
   .color {
     display: inline-block;
-    height: 48px;
-    width: 48px;
+    height: 12px;
+    width: 12px;
     cursor: pointer;
   }
   
