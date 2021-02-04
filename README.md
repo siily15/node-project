@@ -6,10 +6,10 @@
  - Karl-Mihkel Truu
  - Johan-Rasmus Teär
  - Gerli Kask
- 
+
  2. Teema:
- 
-Lähme chati teemaga edasi 
+
+Lähme chati teemaga edasi
 
 3. Võimalikud uued lisafunktionaalsused:
   - Canvas (joonistamine)
@@ -52,3 +52,6 @@ Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
 Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
 Üks pehme oskus, mida õppisin ja endas arendasin
 Üks tehniline oskus, mida õppisin ja endas arendasin
+
+
+Figma link - https://www.figma.com/files/project/23570233/Private-chat
