@@ -1,0 +1,95 @@
+::placeholder {
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(73, 64, 188, 1);
+}
+
+.sign-up-h1 {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(73, 64, 188, 1);
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.register-conteiner {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background: linear-gradient(to left, #4A35C2, rgba(71, 94, 174, 100)), #485fed;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(73, 64, 188, 1);
+    display: flex;
+    justify-content: left;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 3em;
+}
+
+.login-in-btn {
+    color: rgba(73, 64, 188, 1);
+    background: linear-gradient(90deg, #79FF10 0%, #2BFFCC 100%);
+    margin-top: 1rem;
+    margin-left: 4rem;
+    height: 44px;
+    width: 155px;
+    left: 144px;
+    top: 329px;
+    border-radius: 8px;
+    border: none;
+
+}
+
+.register-btn {
+    padding: 10px;
+    background-color: #42b983;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    width: 40%;
+    color: white;
+    cursor: pointer;
+}
+
+.from-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+input {
+    background: #FAFAFA;
+    box-shadow: 2px 2px 4px rgba(73, 64, 188, 0.24);
+    border: none;
+    border-bottom: 1px solid #afafaf;
+    padding: 10px 5px;
+}
+
+.login-card {
+    border-radius: 8px;
+    border-top: 23px solid transparent;
+    border-image: linear-gradient(90deg, #2BFFCC 0%, #79FF10 100%);
+    border-image-slice: 1;
+    width: 300px;
+    background: white;
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.06);
+    padding: 3em;
+    text-align: left;
+}
+
+.from-group input:focus {
+    outline: none;
+    border-bottom-color: #42b983;
+    background-color: #f7f7f7;
+}
