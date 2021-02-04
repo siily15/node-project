@@ -3,6 +3,9 @@ var socket = io();
 const messageInput = document.getElementById('message-input');
 const chatMessages = document.getElementById('chat-messages');
 const userList = document.getElementById('user-list');
+const pingbutton = document.getElementById('pingbutton');
+
+
 
 messageInput.focus();
 
@@ -29,7 +32,18 @@ socket.on('updateUserList', userListObj => {
         </div>`;
     }
 });
+// A user connects to the server (opens a socket)
+pingbutton.addEventListener('click', event => {
+    var data=1
+    console.log('socket: browser says ping', data)
+    socket.emit('ping', data)
 
+    });
+socket.on('pong', data => {
+    console.log('socket: browser recieves pong', data)
+    
+
+});
 socket.on('chat_message', msgObj => {
     console.log(msgObj)
     const item = document.createElement('div');

@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <canvas class="whiteboard" ></canvas>
+
+    <div class="colors">
+      Color Selection: <br/>
+      <div class="color black"></div>
+      <div class="color red"></div>
+      <div class="color green"></div>
+      <div class="color blue"></div>
+      <div class="color yellow"></div>
+    </div>
     <main class="chat">
         <section>
             <div id="user-list" class="contacts">
@@ -18,6 +28,7 @@
             <div class="chat-header">
                 <p>Siia tuleb kasutajanimi</p>
                 <button id="logout">Log out</button>
+                <button id="pingbutton">pingbutton</button>
             </div>
             <div id="chat-messages" class="chat-body">
             
@@ -27,9 +38,11 @@
                     <input  id="message-input" type="text" value="" placeholder="Aa" />
                 </label>
             </div>
+
         </section>
     </main>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/public/js/app.js"></script>
+    <script src="/public/js/canvas.js"></script>
 </body>
 </html>
