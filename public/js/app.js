@@ -34,7 +34,7 @@ socket.on('chat_message', msgObj => {
     console.log(msgObj)
     const item = document.createElement('div');
     item.innerHTML = `
-        <div>
+        <div class="chats">
             <p><b class="username">${msgObj.user}</b></p>
             <p class="chatmessage">${msgObj.message}</p>
         </div>
