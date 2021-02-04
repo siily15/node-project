@@ -25,7 +25,7 @@ socket.on('updateUserList', userListObj => {
     for (const userName in userListObj) {
         userList.innerHTML += `
         <div>
-            <p>${ userName }</p>
+            <p>${userName}</p>
         </div>`;
     }
 });
@@ -35,14 +35,14 @@ socket.on('chat_message', msgObj => {
     const item = document.createElement('div');
     item.innerHTML = `
         <div>
-            <p><b>${ msgObj.user }</b></p>
-            <p>${ msgObj.message }</p>
+            <p><b class="username">${msgObj.user}</b></p>
+            <p class="chatmessage">${msgObj.message}</p>
         </div>
     `
     chatMessages.appendChild(item);
 });
 
-document.getElementById('logout').onclick = function() {
+document.getElementById('logout').onclick = function () {
     console.log('logout');
     location.href = '/logout';
 };
