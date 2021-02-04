@@ -92,3 +92,8 @@ input {
     outline: none;
     border-bottom-color: #42b983;
     background-color: #f7f7f7;
+}
+
+a{
+    text-decoration: none;
+}
