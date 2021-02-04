@@ -47,6 +47,7 @@ Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
 Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
 Üks pehme oskus, mida õppisin ja endas arendasin
 Üks tehniline oskus, mida õppisin ja endas arendasin
+Ei oleks tahtnud. Õppisin tiimitööd. Õppisin ubuntut ja terminale kasutama. Vajaka jäi erialastest oskustest.
 
 - Gerli Kask
 Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
