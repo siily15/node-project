@@ -24,25 +24,27 @@
             <div id="user-list" class="contacts">
             </div>
         </section>
-        <section> 
+        <section>
             <div class="chat-header">
-                <p>Siia tuleb kasutajanimi</p>
-                <button id="logout">Log out</button>
-                <button id="pingbutton">pingbutton</button>
-            </div>
-            <div id="chat-messages" class="chat-body">
-            
-            </div>
-            <div class="chat-footer">
-                <label>
-                    <input  id="message-input" type="text" value="" placeholder="Aa" />
-                </label>
-            </div>
+                <p>User</p>
 
+            </div>
+            <section>
+                <div id="chat-messages" class="chat-body">
+
+                </div>
+                <div class="chat-footer">
+                    <label>
+                        <input id="message-input" type="text" value="" placeholder="Aa" />
+                    </label>
+            </section>
+            </div>
+            <button id="logout">Log out</button>
         </section>
     </main>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/public/js/app.js"></script>
     <script src="/public/js/canvas.js"></script>
 </body>
+
 </html>

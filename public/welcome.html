@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    body {
+        background-color: #4940BC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-family: 'Raleway', sans-serif;
+        color: #4940BC;
+        padding-left: 3rem;
+    }
+
+    .main-container {
+        margin-top: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        height: 95vh;
+        width: 93vw;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .canvas-private-chat-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contacts-box {
+        width: 20vw;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        height: 82vh;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+    }
+
+    .group-chat-box {
+        width: 33vw;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        height: 82vh;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .canvas-box {
+        width: 32vw;
+        height: 30vh;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+    }
+
+    .private-chat-box {
+        width: 32vw;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        height: 50vh;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .text-entry-box {
+        color: #4940BC;
+        font-family: 'Raleway';
+        padding-left: 1.5rem;
+        height: 3rem;
+        background-color: #FFFFFF;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-gradient {
+        height: 1.2rem;
+        width: 100%;
+        background: linear-gradient(270deg, #79FF10 0%, #2BFFCC 100%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .box-top-gradient {
+        background: linear-gradient(270deg, #79FF10 0%, #2BFFCC 100%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .box-top-text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.3rem;
+        color: #4940BC;
+        padding-left: 1rem;
+    }
+
+    .box-top-text-alt {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.3rem;
+        color: #4940BC;
+        padding-left: 0.5rem;
+    }
+
+    .box-expand-text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.8rem;
+        color: #4940BC;
+        padding-right: 0.5rem;
+        display: flex;
+    }
+
+    .box-expand-icon {
+        padding-right: 1rem;
+    }
+
+    .svg-icon-top {
+        padding-left: 1rem;
+    }
+
+    .svg-icon-top-alt {
+        padding-left: 0.5rem;
+    }
+
+    .box-top-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around
+    }
+
+    .box-top-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .navbar li {
+        list-style: none;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #4940BC;
+        font-family: 'Raleway';
+    }
+
+    .navbar-links {
+        width: 20vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section {
+        display: flex;
+    }
+
+    #chat-messages {
+        font-family: 'Raleway';
+        color: #4940BC;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        justify-content: flex-start;
+    }
+
+    #chat-messages.chat-body {
+        display: flex;
+        justify-content: flex-start;
+        overflow-y: scroll;
+    }
+
+    #message-input {
+        width: 25vw;
+        border: none;
+        font-family: 'Raleway';
+        color: #4940BC;
+    }
+
+    #user-list {
+        font-family: 'Raleway';
+        margin-left: 1rem;
+        color: #4940BC;
+        font-weight: bold;
+    }
+
+    .chatbox {
+        display: flex;
+        justify-content: start;
+        overflow-y: scroll;
+    }
+
+
+    .chatmessage {
+        margin-top: -0.5rem;
+        border-radius: 10px;
+        padding: 0.8rem;
+        background: linear-gradient(-90deg, #79FF10 0%, #2BFFCC 100%);
+        width: fit-content;
+        max-width: 25vw;
+        flex-wrap: wrap;
+    }
+
+    .username {
+        font-size: 0.7rem;
+        font-weight: bolder;
+    }
+
+    .chats {
+        display: flex;
+
+    }
+</style>
+
+<body>
+
+    <div class="main-container">
+        <div class="top-gradient"></div>
+        <div class="navbar">
+            <h1>Welcome back, kasutajanimi!</h1>
+            <ul class="navbar-links">
+                <li><a href="#">Preferences</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a id="logout" href="#">Log out</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="contacts-box">
+                <div class="box-top-gradient">
+                    <div class="box-top-left">
+                        <svg class="svg-icon-top" width="32" height="32" viewBox="0 0 34 34" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.0001 17C20.1309 17 22.6667 14.4642 22.6667 11.3333C22.6667 8.20249 20.1309 5.66666 17.0001 5.66666C13.8692 5.66666 11.3334 8.20249 11.3334 11.3333C11.3334 14.4642 13.8692 17 17.0001 17ZM17.0001 19.8333C13.2176 19.8333 5.66675 21.7317 5.66675 25.5V26.9167C5.66675 27.6958 6.30425 28.3333 7.08341 28.3333H26.9167C27.6959 28.3333 28.3334 27.6958 28.3334 26.9167V25.5C28.3334 21.7317 20.7826 19.8333 17.0001 19.8333Z"
+                                fill="#4940BC" />
+                        </svg>
+                        <p class="box-top-text">Contacts</p>
+                    </div>
+                    <div class="box-top-right">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <!DOCTYPE svg
+                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
+                            viewBox="0 0 342.382 342.382" style="enable-background:new 0 0 342.382 342.382;"
+                            xml:space="preserve" class="box-expand-icon">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path d="M45.225,125.972C20.284,125.972,0,146.256,0,171.191c0,24.94,20.284,45.219,45.225,45.219
+				c24.926,0,45.219-20.278,45.219-45.219C90.444,146.256,70.151,125.972,45.225,125.972z" fill="#4940BC" />
+                                    </g>
+                                    <g>
+                                        <path d="M173.409,125.972c-24.938,0-45.225,20.284-45.225,45.219c0,24.94,20.287,45.219,45.225,45.219
+				c24.936,0,45.226-20.278,45.226-45.219C218.635,146.256,198.345,125.972,173.409,125.972z" fill="#4940BC" />
+                                    </g>
+                                    <g>
+                                        <path d="M297.165,125.972c-24.932,0-45.222,20.284-45.222,45.219c0,24.94,20.29,45.219,45.222,45.219
+				c24.926,0,45.217-20.278,45.217-45.219C342.382,146.256,322.091,125.972,297.165,125.972z" fill="#4940BC" />
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+
+                    </div>
+                </div>
+                <div id="user-list" class="contacts">
+                </div>
+            </div>
+            <div class="group-chat-box">
+                <div class="box-top-gradient">
+                    <div class="box-top-left">
+                        <svg class="svg-icon-top-alt" xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                            viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"
+                            fill="#4940BC">
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M75.036,52.356c4.69,1.377,3.886,4.781,3.872,7.063h-11.7c-0.421-1.381-1.46-2.671-3.942-3.396l-0.785-0.235      c-3.284-0.955-5.042-1.471-5.502-2.506c-0.112-0.373-0.078-0.787,1.017-1.185c3.519-1.024,5.302-1.56,5.723-2.878h0.222      c-0.06-0.053-0.118-0.105-0.173-0.168c-1.739-1.677-3.067-4.949-3.067-7.591c0-3.736,2.86-6.191,5.566-6.191      c2.705,0,5.427,2.652,5.427,6.393c0,2.642-1.478,5.811-3.293,7.432C68.775,50.619,70.815,51.118,75.036,52.356z">
+                                            </path>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M66.957,68.003H30.61c-0.022-0.364-0.045-0.728-0.089-1.157c-0.112-1.436-0.224-2.914,0.178-4.265       c0.491-1.585,1.764-2.978,4.71-3.836l1.139-0.364c5.179-1.479,7.948-2.314,8.863-4.265l0.291-0.491l-0.022-0.622       c-0.067-0.043-0.111-0.085-0.201-0.193c-0.313-0.321-0.625-0.643-0.916-1.027c-2.009-2.552-3.438-6.494-3.438-9.75       c0-4.159,3.082-8.573,7.68-8.573c3.595,0,7.458,3.558,7.458,8.872c0,3.387-1.764,7.585-4.175,10.05       c-0.157,0.173-0.335,0.321-0.491,0.472l-0.29,0.258l0.089,0.387c0.625,2.441,3.438,3.277,9.086,4.884l1.161,0.364       c2.925,0.858,4.309,2.273,4.912,3.836h0.022c0.559,1.521,0.491,3.173,0.424,4.715C66.979,67.531,66.979,67.788,66.957,68.003z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="M22.434,52.356c-4.694,1.377-3.884,4.781-3.872,7.063h11.696c0.424-1.381,1.459-2.671,3.946-3.396l0.782-0.235      c3.287-0.955,5.046-1.471,5.503-2.506c-0.125-0.411,0.102-1.027-1.019-1.185c-3.517-1.024-5.3-1.56-5.72-2.878h-0.22      c0.059-0.053,0.119-0.105,0.172-0.168c1.739-1.677,3.068-4.949,3.068-7.591c0-3.736-2.859-6.191-5.566-6.191      c-2.708,0-5.427,2.652-5.427,6.393c0,2.642,1.472,5.811,3.287,7.432C28.692,50.619,26.649,51.118,22.434,52.356z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <p class="box-top-text-alt">Group Chat</p>
+                    </div>
+                    <div class="box-top-right">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <!DOCTYPE svg
+                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
+                            viewBox="0 0 342.382 342.382" style="enable-background:new 0 0 342.382 342.382;"
+                            xml:space="preserve" class="box-expand-icon">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path d="M45.225,125.972C20.284,125.972,0,146.256,0,171.191c0,24.94,20.284,45.219,45.225,45.219
+				c24.926,0,45.219-20.278,45.219-45.219C90.444,146.256,70.151,125.972,45.225,125.972z" fill="#4940BC" />
+                                    </g>
+                                    <g>
+                                        <path d="M173.409,125.972c-24.938,0-45.225,20.284-45.225,45.219c0,24.94,20.287,45.219,45.225,45.219
+				c24.936,0,45.226-20.278,45.226-45.219C218.635,146.256,198.345,125.972,173.409,125.972z" fill="#4940BC" />
+                                    </g>
+                                    <g>
+                                        <path d="M297.165,125.972c-24.932,0-45.222,20.284-45.222,45.219c0,24.94,20.29,45.219,45.222,45.219
+				c24.926,0,45.217-20.278,45.217-45.219C342.382,146.256,322.091,125.972,297.165,125.972z" fill="#4940BC" />
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="chatbox">
+                    <section>
+                        <div id="chat-messages" class="chat-body">
+                        </div>
+                </div>
+                <div class="text-entry-box">
+                    <label>
+                        <input id="message-input" type="text" value="" placeholder="Type your message here..." />
+                    </label>
+                    </section>
+                    <svg class="box-expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.37999 21.01C7.86999 21.5 8.65999 21.5 9.14999 21.01L17.46 12.7C17.85 12.31 17.85 11.68 17.46 11.29L9.14999 2.97999C8.65999 2.48999 7.86999 2.48999 7.37999 2.97999C6.88999 3.46999 6.88999 4.25999 7.37999 4.74999L14.62 12L7.36999 19.25C6.88999 19.73 6.88999 20.53 7.37999 21.01Z"
+                            fill="#4940BC" fill-opacity="0.7" />
+                    </svg>
+                </div>
+            </div>
+            <div class="canvas-private-chat-container">
+                <div class="canvas-box">
+                    <div class="box-top-gradient">
+                        <div class="box-top-left">
+                            <svg class="svg-icon-top" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.9999 5.33332V2.66666H5.33325V10.6667H23.9999V7.99999H25.3333V13.3333H11.9999V29.3333H17.3333V16H27.9999V5.33332H23.9999Z"
+                                    fill="#4940BC" />
+                            </svg>
+                            <p class="box-top-text">Canvas</p>
+                        </div>
+                        <div class="box-top-right">
+                            <p class="box-expand-text">Click to expand</p>
+                            <svg class="box-expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 19H5L5.007 12H7V17H12V19ZM18.992 12H17V7H12V5H19L18.992 12Z" fill="#4940BC"
+                                    fill-opacity="0.7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="private-chat-box">
+                    <div class="box-top-gradient">
+                        <div class="box-top-left">
+                            <svg class="svg-icon-top" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M26.6667 2.66666H5.33341C3.86675 2.66666 2.68008 3.86666 2.68008 5.33333L2.66675 29.3333L8.00008 24H26.6667C28.1334 24 29.3334 22.8 29.3334 21.3333V5.33333C29.3334 3.86666 28.1334 2.66666 26.6667 2.66666ZM24.0001 18.6667H8.00008V16H24.0001V18.6667ZM24.0001 14.6667H8.00008V12H24.0001V14.6667ZM24.0001 10.6667H8.00008V8H24.0001V10.6667Z"
+                                    fill="#4940BC" />
+                            </svg>
+                            <p class="box-top-text">Private chat</p>
+                        </div>
+                        <div class="box-top-right">
+                            <p class="box-expand-text">Click to expand</p>
+                            <svg class="box-expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 19H5L5.007 12H7V17H12V19ZM18.992 12H17V7H12V5H19L18.992 12Z" fill="#4940BC"
+                                    fill-opacity="0.7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chatbox">Kuule pane see chatiasi siia!</div>
+                    <div class="text-entry-box">
+                        <p>Write your message here...</p>
+                        <svg class="box-expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.37999 21.01C7.86999 21.5 8.65999 21.5 9.14999 21.01L17.46 12.7C17.85 12.31 17.85 11.68 17.46 11.29L9.14999 2.97999C8.65999 2.48999 7.86999 2.48999 7.37999 2.97999C6.88999 3.46999 6.88999 4.25999 7.37999 4.74999L14.62 12L7.36999 19.25C6.88999 19.73 6.88999 20.53 7.37999 21.01Z"
+                                fill="#4940BC" fill-opacity="0.7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/app.js"></script>
+</body>
+
+</html>
