@@ -53,6 +53,8 @@ Ei oleks tahtnud. Õppisin tiimitööd. Õppisin ubuntut ja terminale kasutama. 
 Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
 Üks pehme oskus, mida õppisin ja endas arendasin
 Üks tehniline oskus, mida õppisin ja endas arendasin
-
+Oleks tahtnud rohkem panustada kuid omandatud teadmistest jäi väheks.
+Sain tutvust teha põgusamalt githubiga.
+Õppisin kuidas panna püsti Redise serverit.
 
 Figma link - https://www.figma.com/files/project/23570233/Private-chat
