@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+    body {
+        background-color: #4940BC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-family: 'Raleway', sans-serif;
+        color: #4940BC;
+        padding-left: 3rem;
+    }
+
+    .main-container {
+        margin-top: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        height: 95vh;
+        width: 95vw;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .canvas-private-chat-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contacts-box {
+        width: 20vw;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        height: 82vh;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+    }
+
+    .group-chat-box {
+        width: 33vw;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        height: 82vh;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+    }
+
+    .canvas-box {
+        width: 32vw;
+        height: 30vh;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+    }
+
+    .private-chat-box {
+        width: 32vw;
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        height: 50vh;
+        box-shadow: 4px 4px 4px rgba(73, 64, 188, 0.24);
+    }
+
+    .top-gradient {
+        height: 1.2rem;
+        width: 100%;
+        background: linear-gradient(270deg, #79FF10 0%, #2BFFCC 100%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .box-top-gradient {
+        background: linear-gradient(270deg, #79FF10 0%, #2BFFCC 50%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .box-top-text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.3rem;
+        color: #4940BC;
+        padding-left: 4rem;
+    }
+</style>
+
+<body>
+
+    <div class="main-container">
+        <div class="top-gradient"></div>
+        <h1>Welcome back, kasutajanimi!</h1>
+        <div class="main-content">
+            <div class="contacts-box">
+                <div class="box-top-gradient">
+
+                    <p class="box-top-text">Contacts</p>
+                </div>
+            </div>
+            <div class="group-chat-box">
+                <div class="box-top-gradient">
+                    <p class="box-top-text">Group Chat</p>
+                </div>
+            </div>
+            <div class="canvas-private-chat-container">
+                <div class="canvas-box">
+                    <div class="box-top-gradient">
+                        <p class="box-top-text">Canvas</p>
+                    </div>
+                </div>
+                <div class="private-chat-box">
+                    <div class="box-top-gradient">
+                        <p class="box-top-text">Private chat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
