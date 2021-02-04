@@ -29,7 +29,7 @@
         background-color: white;
         border-radius: 10px;
         height: 95vh;
-        width: 95vw;
+        width: 93vw;
     }
 
     .main-content {
@@ -93,6 +93,7 @@
         height: 3rem;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .box-top-text {
@@ -100,6 +101,13 @@
         font-size: 1.3rem;
         color: #4940BC;
         padding-left: 4rem;
+    }
+
+    .box-expand-text {
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.8rem;
+        color: #4940BC;
+        padding-right: 3rem;
     }
 </style>
 
@@ -124,11 +132,14 @@
                 <div class="canvas-box">
                     <div class="box-top-gradient">
                         <p class="box-top-text">Canvas</p>
+                        <p class="box-expand-text">Click to expand</p>
                     </div>
                 </div>
                 <div class="private-chat-box">
                     <div class="box-top-gradient">
+                        <img src="public/svg/message.svg">
                         <p class="box-top-text">Private chat</p>
+                        <p class="box-expand-text">Click to expand</p>
                     </div>
                 </div>
             </div>
