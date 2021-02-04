@@ -189,6 +189,10 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    section {
+        display: flex;
+    }
 </style>
 
 <body>
@@ -200,7 +204,7 @@
             <ul class="navbar-links">
                 <li><a href="#">Preferences</a></li>
                 <li><a href="#">Profile</a></li>
-                <li><a href="#">Log out</a></li>
+                <li><a id="logout" href="#">Log out</a></li>
             </ul>
         </div>
         <div class="main-content">
@@ -273,6 +277,8 @@
                         </svg>
 
                     </div>
+                </div>
+                <div id="user-list" class="contacts">
                 </div>
             </div>
             <div class="group-chat-box">
@@ -367,9 +373,16 @@
 
                     </div>
                 </div>
-                <div class="chatbox">Kuule pane see chatiasi siia!</div>
+                <div class="chatbox">
+                    <section>
+                        <div id="chat-messages" class="chat-body">
+                        </div>
+                </div>
                 <div class="text-entry-box">
-                    <p>Write your message here...</p>
+                    <label>
+                        <input id="message-input" type="text" value="" placeholder="Aa" />
+                    </label>
+                    </section>
                     <svg class="box-expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -434,7 +447,8 @@
             </div>
         </div>
     </div>
-
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/app.js"></script>
 </body>
 
 </html>
