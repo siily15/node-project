@@ -47,7 +47,7 @@ h1 {
 
     .login-in-btn {
         color: rgba(73, 64, 188, 1);
-        background: linear-gradient(90deg, #79FF10 0%, #2BFFCC 100%);
+        background: linear-gradient(90deg, #2BFFCC 0%, #79FF10 100%);
         margin-top: 1rem;
         margin-left: 4rem;
         height: 44px;
