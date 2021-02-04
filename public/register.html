@@ -4,36 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Register</title>
+    <link rel="stylesheet" href="/public/css/register.css">
+    <link href='https://css.gg/profile.css' rel='stylesheet'>
+    <title>Sign up</title>
 </head>
 
 <body>
-    <div>
-        <h2 class="font-semibold text-white text-2xl">
-            Register
-        </h2>
+    <div class="flex-center">
+
+    <div class="login-card">
+     <form class="login-form">
+        <h1>
+            Sign up
+        </h1>
         <span id="register-error"></span>
-        <form>
-            <div>
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text">
+
+            <div class="from-group">
+                <input id="username" name="username" type="text" placeholder="Username">
                 <span id="username-error"></span>
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input id="password" type="password" >
+            <div class="from-group">
+
+                <input id="password" type="password" placeholder="Password" >
                 <span id="password-error"></span>
             </div>
-            <div>
-                <label for="password-again">Password Confirm</label>
-                <input class="confirmPassword" id="password-again" type="password" >
+            <div class="from-group">
+
+                <input id="password-again" type="password" placeholder="Confirm password" >
                 <span id="password-again-error"></span>
             </div>
             <div>
-                <button type="button" id="register-button">Register</button>
+                <button class="login-in-btn" type="button" id="register-button" class="reg-btn">Sign up</button><br><br>
             </div>
-        </form>
+            <div class="register-conteiner">
+
+                <a href="login.html" id="register-button"><h1 class="sign-up-h1">Already have an account?  Sign in</a> </h1>
+            </div>
+        </span>
+     </form>
+    </div>
     </div>
     <script src="/public/js/register-validate.js"></script>
     <script src="/public/js/register.js"></script>
