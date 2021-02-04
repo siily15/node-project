@@ -58,6 +58,8 @@ io.use((socket, next) => {
 });
 
 
+
+
 // Router // Here are all GET, POST, PUT, DELETE routes defined for the app
 app.get("/", (req, res) => {
     sess = req.session;
@@ -148,8 +150,11 @@ io.on('connection', (socket) => {
         delete userList[sess.username];
         io.emit('updateUserList', userList);
     });
-});
 
+    socket.on('sendYo', data => {
+        socket.to(data.socketId).emit('reciveYo', { 'user': sess.username });
+    });
+});
 
 // Run node.js server
 http.listen(port, () => {
