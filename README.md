@@ -80,13 +80,11 @@ Torkasin varba javascriptivette, lõin enda jaoks selles keeles uusi seoseid. Va
 
 - Johan-Rasmus Teär
 
-**Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?**
+**Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?** Ei oleks tahtnud. Tiim töötas hästi ja kõigil olid omad ülesanded.
 
-**Üks pehme oskus, mida õppisin ja endas arendasin**
+**Üks pehme oskus, mida õppisin ja endas arendasin** Tiimitöö oskus arenes, õppisin arusaama üldisest arendusprotsessist.
 
-**Üks tehniline oskus, mida õppisin ja endas arendasin**
-
-Ei oleks tahtnud. Õppisin tiimitööd. Õppisin ubuntut ja terminale kasutama. Vajaka jäi erialastest oskustest.
+**Üks tehniline oskus, mida õppisin ja endas arendasin** Õppisin ubuntut ja terminale kasutama. Vajaka jäi erialastest oskustest, et olla kasulikum ülesannete lahendamisel. 
 
 
 - Gerli Kask
