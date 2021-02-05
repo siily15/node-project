@@ -9,6 +9,8 @@ const session = require('express-session');
 const redis = require('redis');
 const connectRedis = require('connect-redis');
 
+const{currentUser} = require
+
 var bodyParser = require('body-parser');
 const path = require('path');
 
@@ -141,10 +143,12 @@ io.on('connection', (socket) => {
     // On connection update user list
     userList[sess.username] = socket.id;
     io.emit('updateUserList', userList);
+    socket.emit('myUserName', sess.username);
 
     // On connection emit drawing
 
     socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+
 
     
 

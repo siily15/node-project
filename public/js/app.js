@@ -4,6 +4,7 @@ const messageInput = document.getElementById('message-input');
 const chatMessages = document.getElementById('chat-messages');
 const userList = document.getElementById('user-list');
 const pingbutton = document.getElementById('pingbutton');
+var userName=document.getElementById('username')
 
 
 
@@ -45,6 +46,13 @@ socket.on('chat_message', msgObj => {
     `
     chatMessages.appendChild(item);
 });
+
+socket.on('myUserName', userName =>{
+    const userNameDiv=document.getElementById('user-name')
+    userNameDiv.innerHTML = `
+        Welcome back, ${userName}` 
+
+})
 
 document.getElementById('logout').onclick = function () {
     console.log('logout');
