@@ -20,8 +20,11 @@ Lähme chati teemaga edasi
 4. Küsimuste vastused:
  - Egle Puppart
 Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
+Ei, mulle sobis, et sain selliseid asju teha, mida pole varem saanud teha.
 Üks pehme oskus, mida õppisin ja endas arendasin
+Meeskonnaga kohanemise ja arvestamise oskus - igaüks omas tempos, aga grupi mõistes ajagraafikus.
 Üks tehniline oskus, mida õppisin ja endas arendasin
+Githubiga põhjalikum tutvumine, Bugide vigade/lahenduste otsimine, uued teemad - redis serverd Socket io
 
 - Uku Volke
 Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
