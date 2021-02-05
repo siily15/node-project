@@ -19,7 +19,7 @@
 }
 
 body {
-    background: linear-gradient(to left, #4A35C2, rgba(71, 94, 174, 100)), #485fed;
+    background: #4940BC;
     display: flex;
     justify-content: center;
     padding-top: 3rem;
@@ -53,7 +53,7 @@ h1 {
 
 .register-btn {
     padding: 10px;
-    background-color: #42b983;
+    background-color: #4940BC;
     border: none;
     border-radius: 4px;
     display: block;
