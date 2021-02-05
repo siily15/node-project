@@ -31,7 +31,7 @@ function validate(e) {
         isSuccess = false;
         const passwordAgainError = document.getElementById("password-again-error");
         passwordAgainError.innerHTML = `
-        <p>Password must be the same!</p>
+        <p>Passwords don't match!</p>
     `
     }
 }
