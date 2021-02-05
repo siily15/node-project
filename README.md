@@ -37,21 +37,23 @@ Githubiga põhjalikum tutvumine, Bugide vigade/lahenduste otsimine, uued teemad 
 - Uku Volke
 
 **Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?**
+
+
+**Üks pehme oskus, mida õppisin ja endas arendasin**
+
+**Üks tehniline oskus, mida õppisin ja endas arendasin**
+
+
+
+- Kevin Rull
+
+**Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?**
 ei oleks, olin rahul oma ülesandega isegi kui ma väga ei osanud seda väga hästi.
 
 **Üks pehme oskus, mida õppisin ja endas arendasin**
 
 **Üks tehniline oskus, mida õppisin ja endas arendasin**
 arendasin oma teadmisi javascriptis.
-
-
-- Kevin Rull
-
-**Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?**
-
-**Üks pehme oskus, mida õppisin ja endas arendasin**
-
-**Üks tehniline oskus, mida õppisin ja endas arendasin**
 
 
 - Arno Kosk
