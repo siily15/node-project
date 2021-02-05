@@ -39,7 +39,7 @@ Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
 - Arno Kosk
 Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas
 Üks pehme oskus, mida õppisin ja endas arendasin
-Üks tehniline oskus, mida õppisin ja endas arendasin
+Üks tehniline oskus, mida õppisin ja endas arendasin.
 Ei olek soovinud teist ala see sobis mulle(back end ja front end), õppisin rohkem terminali vigadest aru , õppisin socetid rohkem kasutada 
 
 - Karl-Mihkel Truu
