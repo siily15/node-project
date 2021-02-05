@@ -18,6 +18,7 @@ Lähme chati teemaga edasi
   - Live videode/kõne tegemine
 
 4. Küsimuste vastused:
+
  - Egle Puppart
 
 **Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?**
@@ -43,6 +44,7 @@ Githubiga põhjalikum tutvumine, Bugide vigade/lahenduste otsimine, uued teemad 
 
 
 - Kevin Rull
+
 **Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?**
 
 **Üks pehme oskus, mida õppisin ja endas arendasin**
@@ -51,6 +53,7 @@ Githubiga põhjalikum tutvumine, Bugide vigade/lahenduste otsimine, uued teemad 
 
 
 - Arno Kosk
+
 **Kas oleksid tahtnud täita mingit muud ülesannet selles meeskonnas?**
 
 **Üks pehme oskus, mida õppisin ja endas arendasin**
