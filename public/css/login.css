@@ -77,10 +77,8 @@ input {
 }
 
 .login-card {
-    border-radius: 8px;
-    border-top: 23px solid transparent;
-    border-image: linear-gradient(90deg, #2BFFCC 0%, #79FF10 100%);
-    border-image-slice: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     width: 300px;
     background: white;
     box-shadow: 0 18px 30px rgba(0, 0, 0, 0.06);
@@ -96,4 +94,12 @@ input {
 
 a{
     text-decoration: none;
+}
+
+.top-gradient {
+    height: 1.2rem;
+    width: 100%;
+    background: linear-gradient(270deg, #79FF10 0%, #2BFFCC 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
