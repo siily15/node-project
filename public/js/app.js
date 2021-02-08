@@ -3,6 +3,10 @@ var socket = io();
 const messageInput = document.getElementById('message-input');
 const chatMessages = document.getElementById('chat-messages');
 const userList = document.getElementById('user-list');
+const pingbutton = document.getElementById('pingbutton');
+var userName=document.getElementById('username')
+
+
 
 messageInput.focus();
 
@@ -117,10 +121,15 @@ socket.on('updateUserList', userListObj => {
     for (const userName in userListObj) {
         userList.innerHTML += `
         <div>
+
+            <p>${userName}</p>
+=======
             <p class="user" data-socketid="${ userListObj[userName] }">${ userName }</p>
+
         </div>`;
     }
 });
+// A user connects to the server (opens a socket)
 
 const users = document.getElementsByClassName('user');
 
@@ -136,15 +145,22 @@ socket.on('chat_message', msgObj => {
     console.log(msgObj)
     const item = document.createElement('div');
     item.innerHTML = `
-        <div>
-            <p><b>${ msgObj.user }</b></p>
-            <p>${ msgObj.message }</p>
+        <div class="chats">
+            <p><b class="username">${msgObj.user}</b></p>
+            <p class="chatmessage">${msgObj.message}</p>
         </div>
     `
     chatMessages.appendChild(item);
 });
 
-document.getElementById('logout').onclick = function() {
+socket.on('myUserName', userName =>{
+    const userNameDiv=document.getElementById('user-name')
+    userNameDiv.innerHTML = `
+        Welcome back, ${userName}` 
+
+})
+
+document.getElementById('logout').onclick = function () {
     console.log('logout');
     location.href = '/logout';
 };

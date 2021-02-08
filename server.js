@@ -9,6 +9,8 @@ const session = require('express-session');
 const redis = require('redis');
 const connectRedis = require('connect-redis');
 
+const{currentUser} = require
+
 var bodyParser = require('body-parser');
 const path = require('path');
 
@@ -20,6 +22,10 @@ app.use('/public', express.static('./public/'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Run node.js server
+http.listen(port, () => {
+    console.log('listening on *:' + port);
+});
 
 // redis server
 const RedisStore = connectRedis(session);
@@ -131,6 +137,7 @@ app.get("/logout", (req, res) => {
 });
 
 
+
 // Listen socket.io connections from client side
 io.on('connection', (socket) => {
     const sess = socket.request.session
@@ -138,6 +145,14 @@ io.on('connection', (socket) => {
     // On connection update user list
     userList[sess.username] = socket.id;
     io.emit('updateUserList', userList);
+    socket.emit('myUserName', sess.username);
+
+    // On connection emit drawing
+
+    socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+
+
+    
 
     // On chat message from user emit to all users who are connected
     socket.on('chat_message', msg => {
@@ -151,12 +166,48 @@ io.on('connection', (socket) => {
         io.emit('updateUserList', userList);
     });
 
+
+
+        // (2): The server recieves a ping event
+    // from the browser on this socket
+    socket.on('ping', function ( data ) {
+  
+        console.log('socket: server recieves ping (2)');
+    
+        // (3): Return a pong event to the browser
+        // echoing back the data from the ping event 
+        socket.emit( 'pong', data );   
+    
+        console.log('socket: server sends pong (3)');
+    
+        });
+
+
+
+    
+});
+
+
     socket.on('sendYo', data => {
         socket.to(data.socketId).emit('reciveYo', { 'user': sess.username });
     });
 });
 
+
+app.use(express.static(__dirname + '/public'));
+
+function onConnection(socket){
+  socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+}
+
+io.on('connection', onConnection);
+
+
+
+
+=======
 // Run node.js server
 http.listen(port, () => {
     console.log('listening on *:' + port);
 });
+
