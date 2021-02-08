@@ -64,6 +64,8 @@ io.use((socket, next) => {
 });
 
 
+
+
 // Router // Here are all GET, POST, PUT, DELETE routes defined for the app
 app.get("/", (req, res) => {
     sess = req.session;
@@ -165,6 +167,7 @@ io.on('connection', (socket) => {
     });
 
 
+
         // (2): The server recieves a ping event
     // from the browser on this socket
     socket.on('ping', function ( data ) {
@@ -185,6 +188,11 @@ io.on('connection', (socket) => {
 });
 
 
+    socket.on('sendYo', data => {
+        socket.to(data.socketId).emit('reciveYo', { 'user': sess.username });
+    });
+});
+
 
 app.use(express.static(__dirname + '/public'));
 
@@ -196,4 +204,10 @@ io.on('connection', onConnection);
 
 
 
+
+=======
+// Run node.js server
+http.listen(port, () => {
+    console.log('listening on *:' + port);
+});
 
